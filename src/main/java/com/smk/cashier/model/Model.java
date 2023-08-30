@@ -2,7 +2,7 @@ package com.smk.cashier.model;
 
 import java.util.Date;
 
-public abstract class model {
+public abstract class Model {
     protected Date dateCreated;
     protected Date lastModified;
     protected String createdBy;
