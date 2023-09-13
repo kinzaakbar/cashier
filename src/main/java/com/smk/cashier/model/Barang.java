@@ -3,7 +3,7 @@ package com.smk.cashier.model;
 public class Barang extends Model{
     private String kodeBarang;
     private String namaBarang;
-    private String hargaBarang;
+    private int hargaBarang;
 
     public String getKodeBarang() {
         return kodeBarang;
@@ -21,11 +21,11 @@ public class Barang extends Model{
         this.namaBarang = namaBarang;
     }
 
-    public String getHargaBarang() {
+    public int getHargaBarang() {
         return hargaBarang;
     }
 
-    public void setHargaBarang(String hargaBarang) {
+    public void setHargaBarang(int hargaBarang) {
         this.hargaBarang = hargaBarang;
     }
 
