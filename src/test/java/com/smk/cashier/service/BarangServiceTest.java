@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import javax.swing.plaf.basic.BasicEditorPaneUI;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,7 +18,14 @@ class BarangServiceTest {
     @Order(2)
     void getBarangList() {
         List<Barang> barangList = BarangService.getInstance().getBarangList();
-        assertEquals(barangList.size(),2);
+        assertEquals(barangList.size(),3);
+    }
+    @Test
+    @Order(3)
+    void findByName(){
+        List<Barang> resultList = BarangService.getInstance().findByName("Laptop");
+        assertEquals(resultList.size(),2);
+
     }
 
     @Test
@@ -38,5 +43,12 @@ class BarangServiceTest {
         mouse.setHargaBarang(100000);
         BarangService.getInstance().addBarang(mouse);
 
+        Barang laptopgaming = new Barang();
+        laptopgaming.setKodeBarang("LP0002");
+        laptopgaming.setNamaBarang("Laptop Gaming");
+        laptopgaming.setHargaBarang(20000000);
+        BarangService.getInstance().addBarang(laptopgaming);
+
     }
+
 }
