@@ -1,4 +1,4 @@
-package com.smk.cashier.dao;
+package com.smk.cashier.Dao;
 
 import java.util.Collection;
 import java.util.Optional;
