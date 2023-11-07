@@ -1,4 +1,6 @@
-package com.smk.cashier.dao;
+package com.smk.cashier.Dao;
+
+import com.smk.cashier.model.Stok;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -9,4 +11,6 @@ public interface Dao<T,I> {
     Optional<I> save(T t);
     void update(T t);
     void delete(T t);
+
+    Collection<Stok> search(String keyword);
 }
