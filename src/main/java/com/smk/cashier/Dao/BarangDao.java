@@ -1,6 +1,7 @@
 package com.smk.cashier.Dao;
 
 import com.smk.cashier.model.Barang;
+import com.smk.cashier.model.Stok;
 
 import java.sql.*;
 import java.util.Collection;
@@ -84,5 +85,10 @@ public class BarangDao implements Dao<Barang, Integer>{
     @Override
     public void delete(Barang barang) {
 
+    }
+
+    @Override
+    public Collection<Stok> search(String keyword) {
+        return null;
     }
 }
