@@ -1,4 +1,4 @@
-package com.smk.cashier.Dao;
+package com.smk.cashier.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

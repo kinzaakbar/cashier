@@ -1,4 +1,4 @@
-package com.smk.cashier.Dao;
+package com.smk.cashier.dao;
 
 import com.smk.cashier.model.Stok;
 
@@ -11,14 +11,14 @@ public class StokDao implements Dao<Stok, Integer>{
     private final Optional<Connection> connection;
 
     public StokDao() {
-        connection = JdbcConnection.getConnection();
+        connection = com.smk.cashier.Dao.JdbcConnection.getConnection();
     }
 
     @Override
     public Optional<Stok> get(int id) {
         return connection.flatMap(conn -> {
             Optional<Stok> stok = Optional.empty();
-            String sql = "SELECT from stok where stok_id = ?";
+            String sql = "SELECT * from stok where stok_id = ?";
             try {
                 PreparedStatement ps = conn.prepareStatement(sql);
                 ps.setInt(1, id);
@@ -41,6 +41,7 @@ public class StokDao implements Dao<Stok, Integer>{
             return stok;
         });
     }
+
     @Override
     public Collection<Stok> getAll() {
         return null;
