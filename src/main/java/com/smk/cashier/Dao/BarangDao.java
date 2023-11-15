@@ -1,4 +1,4 @@
-package com.smk.cashier.Dao;
+package com.smk.cashier.dao;
 
 import com.smk.cashier.model.Barang;
 import com.smk.cashier.model.Stok;
