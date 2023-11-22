@@ -1,5 +1,6 @@
 package com.smk.cashier.dao;
 
+import com.smk.cashier.model.Barang;
 import com.smk.cashier.model.Stok;
 
 import java.sql.*;
@@ -11,7 +12,7 @@ public class StokDao implements Dao<Stok, Integer>{
     private final Optional<Connection> connection;
 
     public StokDao() {
-        connection = JdbcConnection.getConnection();
+        connection = com.smk.cashier.dao.JdbcConnection.getConnection();
     }
 
     @Override
@@ -83,5 +84,10 @@ public class StokDao implements Dao<Stok, Integer>{
     @Override
     public void delete(Stok stok) {
 
+    }
+
+    @Override
+    public Collection<Stok> search(String keyword) {
+        return null;
     }
 }
